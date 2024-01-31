@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/configs/constants.dart';
 import 'package:flutter_application_1/views/CustomButton.dart';
 import 'package:flutter_application_1/views/CustomText.dart';
+import 'package:flutter_application_1/views/CustomTextField.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -12,6 +13,10 @@ void main() {
 
 class Home extends StatelessWidget {
   Home({super.key});
+  
+ final TextEditingController usernamecontroller = TextEditingController() ;
+ final TextEditingController passwordcontroller = TextEditingController() ;
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +37,16 @@ class Home extends StatelessWidget {
               style: const TextStyle(fontWeight: FontWeight.w200),
             ),
           ),
-          //CustomTextField(
-          //  passwordController: ,
-          //  controller: ,
-          //),
+          customTextField(
+          labelText: "Username", 
+          controller: usernamecontroller
+          ),
           customText(
               label: "Password",
               style: const TextStyle(
                 fontWeight: FontWeight.w200,
               )),
+          customTextField(labelText: "Password", controller: passwordcontroller),
           customButton(
               btnLabel: "Proceed",
               btnColor: primaryColor,

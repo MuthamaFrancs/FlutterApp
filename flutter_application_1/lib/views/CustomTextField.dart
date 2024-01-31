@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
+class customTextField extends StatelessWidget {
   final TextEditingController controller;
+  final String labelText;
+
   //this is a constructor
-  const CustomTextField({
+  const customTextField({
     super.key,
-    required this.passwordController,
+    required this.labelText,
     required this.controller,
   });
 
-  final TextEditingController passwordController;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: controller,
+    return const Padding(padding: EdgeInsets.all(16.0),
+    child: TextField(
+      decoration: InputDecoration(
+      border: OutlineInputBorder(),
+      ),
+      
+    ),
     );
   }
 }
