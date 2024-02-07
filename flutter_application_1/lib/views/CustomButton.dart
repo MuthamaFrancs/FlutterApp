@@ -7,7 +7,7 @@ class customButton extends StatelessWidget {
       onPressed; //changed the type of onPressed to void Function()? to avoid the conflict with the 'dart:html' library.
 
   //constructor
-  customButton(
+  const customButton(
       {super.key,
       required this.btnLabel,
       required this.btnColor,

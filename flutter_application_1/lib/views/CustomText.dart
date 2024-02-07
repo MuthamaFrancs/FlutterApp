@@ -20,6 +20,7 @@ class customText extends StatelessWidget {
           color: greycolor,
           fontSize: 18,
         ),
+        textAlign: TextAlign.left,
       ),
     );
   }
