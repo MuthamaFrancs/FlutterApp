@@ -7,10 +7,9 @@ class customTextField extends StatelessWidget {
   String? hintText;
   IconData? icon;
   final bool obscureText;
-  
+
   IconData? Iconsuffix;
-  
-  
+
   //this is a constructor
   customTextField({
     super.key,
@@ -22,20 +21,20 @@ class customTextField extends StatelessWidget {
     this.Iconsuffix,
   });
 
-
   @override
   Widget build(BuildContext context) {
-    return  Padding(padding:const EdgeInsets.all(16.0),
-    child: TextField(
-      decoration: InputDecoration(
-      border: const OutlineInputBorder(),
-      prefixIcon: Icon(icon),
-      hintText: hintText,
-      suffixIcon: Icon(Iconsuffix),
-      // suffixIcon: const Icon(Icons.visibility_off),
+    return Padding(
+      padding: const EdgeInsets.all(0.0),
+      child: TextField(
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(),
+          prefixIcon: Icon(icon),
+          hintText: hintText,
+          suffixIcon: Icon(Iconsuffix),
+          // suffixIcon: const Icon(Icons.visibility_off),
+        ),
+        obscureText: obscureText,
       ),
-      obscureText: obscureText,
-    ),
     );
   }
 }
